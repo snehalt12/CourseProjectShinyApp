@@ -21,7 +21,7 @@ radioButtons(inputId = "plotType", label = "Plot type", choices = c("Scatter"="p
 library(ggplot2)
 data <- Orange
 data$Tree <- paste0("Tree ", data$Tree)
-renderPlot({
+output$plot <- renderPlot({
     
     # draw the scatter or line plot based on selected input
     g <- ggplot(data, aes(x=age, y=circumference)) + 
@@ -34,6 +34,8 @@ renderPlot({
     }
     g
   })
+
+plotOutput("plot", brush = brushOpts(id = "brushPlot"))
 
 ```
 

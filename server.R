@@ -7,6 +7,7 @@ library(shiny)
 library(ggplot2)
 
 shinyServer(function(input, output) {
+    
   data <- Orange
   data$Tree <- paste0("Tree ", data$Tree)
    
