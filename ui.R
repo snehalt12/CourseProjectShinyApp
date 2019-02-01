@@ -22,9 +22,12 @@ shinyUI(fluidPage(
     
     # Show a plot of the selected type
     mainPanel(
-       plotOutput("plot", brush = brushOpts(
-         id = "brushPlot"
-       ))
+      tabsetPanel(
+        tabPanel("Plot", plotOutput("plot", brush = brushOpts(
+          id = "brushPlot"
+        ))),
+        tabPanel("Documentation", includeMarkdown("shinyappdoc.Rmd"))
+      )
     )
   )
 ))

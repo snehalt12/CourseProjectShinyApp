@@ -1,0 +1,18 @@
+---
+title: "Developing Data Products - courseProjectShinyApp"
+author: "Snehal Tapdiya"
+date: '2019-01-31'
+output: html_document
+runtime: shiny
+---
+
+### Introduction
+This shiny app demonstrates the growth of Orange trees.
+
+### Features of shiny app
+* Select Shiny widget Radio buttons for selecting the type of graph. (scatter or line)
+
+* Select the area on the plot, and you'll see the output section in sidebar panel will display the data for the selected region on the plot.
+
+
+#### Note : Output section won't display any data until area is not selected on the plot.
